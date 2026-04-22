@@ -1,0 +1,18 @@
+import disciplinas.*
+
+describe "probamos que las disciplinas nos saben decir su presupuesto" {
+  test "tenis al inicio vale 215" {
+    assert.equals(215,tenis.presupuesto())
+    
+  }
+
+  test "si tiene 10 hinchas pasa a ser 230" {
+
+    tenis.CantidadDeHinchas(10)
+    assert.equals(230, tenis.presupuesto())
+  }
+
+  test "judo al inicio tiene un presupuesto de 480"{
+    assert.equals(480, judo.presupuesto())
+  }
+}

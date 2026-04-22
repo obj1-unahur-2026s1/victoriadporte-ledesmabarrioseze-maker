@@ -1,0 +1,20 @@
+import elementos.*
+import atletas.*
+
+describe "probamos que los elementos nos saben decir correctamente su valor"{
+
+    test "si victoria tiene 32 años entonces la raqueta vale 3000"{
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        victoria.cumplirAños()
+        assert.equals(3000,raqueta.valor(victoria))
+        
+    }
+}

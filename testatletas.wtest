@@ -1,0 +1,48 @@
+import atletas.*
+import disciplinas.*
+import elementos.*
+
+
+describe "test de escenarias propuedos en el dominio para atletas" {
+    test "el presupuesto propio de victoria al inicio es de 40" {
+
+    assert.equals(40, victoria.presupuestoPropio())
+    }
+
+    test "victoria se quiere parecer a pareto que mide 150, practica judo y tiene 4 entrenadores" {
+
+        victoria.altura(150)
+        victoria.cambiarDisciplina(judo)
+        victoria.cambiarElemento(kimono)
+        victoria.cambiarCantidadEntrenadores(4)
+
+        assert.equals(40+480+200, victoria.presupuesto())
+    }
+
+    test "Victoria ahora se quiere parecer a Delpotro, elonga y mide 210, empieza a practicar tenis, necesita una raqueta y tiene 4 entrenadores"{
+
+        victoria.altura(210)
+        victoria.cambiarDisciplina(tenis)
+        victoria.cambiarElemento(raqueta)
+        victoria.cambiarCantidadEntrenadores(2)
+
+        assert.equals(20+215+2200, victoria.presupuesto())
+
+
+    }
+
+
+    test "Victoria quiere usar kimono jugando al hockey, manteniendo todos sus otros aspectos de fábrica"{
+
+        victoria.cambiarDisciplina(hockey)
+        victoria.cambiarElemento(kimono)
+
+        assert.equals(1250, victoria.presupuesto())
+
+
+    }
+
+}
+
+
+//Con el ultimo test inventado corroboré que el polimorfismo funcione usando un elemento de judo en hockey
